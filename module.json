@@ -1,7 +1,7 @@
 {
   "id": "auto-untarget",
   "title": "Auto Untarget after Multi-Target Actions",
-  "description": "After a completed Midi-QoL workflow: if more than one target was used, clear the acting user's targets; leave single-target actions untouched.",
+  "description": "Clears the acting player's selected targets after completed Midi-QoL multi-target workflows, preventing stale target highlights while leaving single-target actions untouched.",
   "version": "1.3.1",
   "compatibility": {
     "minimum": "14.369",
@@ -41,6 +41,4 @@
   "readme": "README.md",
   "manifest": "https://github.com/pefcs/auto-untarget/releases/latest/download/module.json",
   "download": "https://github.com/pefcs/auto-untarget/releases/latest/download/module.zip"
-  "manifest": "",
-  "download": ""
 }
