@@ -1,0 +1,41 @@
+{
+  "id": "auto-untarget",
+  "title": "Auto Untarget after Multi-Target Actions",
+  "description": "After a completed Midi-QoL workflow: if more than one target was used, clear the acting user's targets; leave single-target actions untouched.",
+  "version": "1.3.0",
+  "compatibility": {
+    "minimum": "14.369",
+    "verified": "14.369",
+    "maximum": "14.999"
+  },
+  "authors": [
+    {
+      "name": "Pefcs"
+    }
+  ],
+  "esmodules": [
+    "scripts/auto-untarget.js"
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "midi-qol",
+        "type": "module"
+      }
+    ],
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "6.0.6",
+          "verified": "6.0.6",
+          "maximum": "6.999"
+        }
+      }
+    ]
+  },
+  "license": "MIT",
+  "manifest": "",
+  "download": ""
+}
