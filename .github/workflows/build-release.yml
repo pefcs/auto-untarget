@@ -60,7 +60,7 @@ jobs:
 
           if [[ "$EVENT_NAME" == "push" && -n "${BEFORE_SHA:-}" && "$BEFORE_SHA" != "$zero_sha" ]]; then
             if git cat-file -e "${BEFORE_SHA}:module.json" 2>/dev/null; then
-              previous_version="$(git show "${BEFORE_SHA}:module.json" | node --input-type=module -e 'let input = ""; for await (const chunk of process.stdin) input += chunk; console.log(JSON.parse(input).version)')"
+              previous_version="$(git show "${BEFORE_SHA}:module.json" | node --input-type=module -e 'let input = ""; for await (const chunk of process.stdin) input += chunk; try { console.log(JSON.parse(input).version ?? ""); } catch { console.log(""); }')"
             fi
           fi
 
