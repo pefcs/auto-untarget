@@ -10,13 +10,13 @@ Automatically clears the acting player's selected targets after a completed Midi
 - Clears targets locally for the user whose client executed the workflow; it does not broadcast a target clear to other players.
 - Skips aborted workflows.
 
-The selection comparison is important for Midi-QoL 14.6.5. Midi-QoL now restores the pre-workflow target selection during its `postCleanup` handling only when the current selection still matches the completed workflow's targets. Auto Untarget clears at `RollComplete`, before that restoration, so the intentional clear is preserved. If the selection has changed in the meantime, Auto Untarget does not erase it.
+The selection comparison is important for Midi-QoL 14.6.5 and 14.7.0. Midi-QoL restores the pre-workflow target selection during `postCleanup` only when the current selection still matches the completed workflow's targets. Auto Untarget clears at `RollComplete`, before that restoration, so the intentional clear is preserved. If the selection has changed in the meantime, Auto Untarget does not erase it.
 
 ## Requirements
 
 - Foundry VTT 14.369 or newer within the V14 series
-- D&D 5e 6.0.6–6.0.999
-- Midi-QoL (tested against 14.6.5)
+- D&D 5e 6.0.6–6.1.999 (compatibility reviewed against 6.1.1)
+- Midi-QoL 14.7.0 or newer (required for D&D 5e 6.1.x; `RollComplete` lifecycle reviewed against 14.7.0)
 
 ## Settings
 
